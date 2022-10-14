@@ -1,0 +1,95 @@
+body{
+    background: bisque;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+button{
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    background: aquamarine;
+    color: green;
+    font-size: larger;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+#game{
+    display: none;
+
+    margin: auto;
+    width: 80%;
+    height: 400px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 7px solid green;
+    background: url("../img/fon2.jpeg")center no-repeat;
+}
+#dino{
+    width: 45px;
+    height: 70px;
+    background-image: url("../img/redDino.gif");
+    background-size: 45px 75px;
+    position: absolute;
+    z-index: 1;
+    top: 330px;
+    left: 70px;
+
+}
+#cactus{
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/devil.gif");
+    background-size: 45px 75px;
+    position: absolute;
+    bottom: 0;
+    left: 730px;
+    animation: run 2s infinite linear;
+}
+#prev{
+    font-size: xxx-large;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#demo{
+    font-size: xxx-large;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes run {
+    0%{
+        left: 730px;
+    }
+    50%{
+        left: 360px;
+    }
+    100%{
+        left: -10px;
+    }
+}
+.jump{
+    animation: jump 2.5s linear;
+}
+@keyframes jump {
+    0%{
+        top: 330px;
+    }
+    25%{
+        top: 200px;
+    }
+    50%{
+        top: 100px;
+    }
+    50%{
+        top: 200px;
+    }
+    100%{
+        top: 330px;
+    }
+}
